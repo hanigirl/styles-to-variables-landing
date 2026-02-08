@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styles to Variables | Plugin for Figma</title>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GY8XPV3XV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3GY8XPV3XV');
+    </script>
     <style>
         * {
             margin: 0;
@@ -596,7 +605,7 @@
             <br>בלחיצה אחת
         </p>
 
-        <a href="https://www.figma.com/community/plugin/1600190178687674611/styles-to-variables" target="_blank" class="cta-button">
+        <a href="https://www.figma.com/community/plugin/1600190178687674611/styles-to-variables" target="_blank" class="cta-button" onclick="gtag('event', 'click_download_plugin', {event_category: 'CTA', event_label: 'Download Plugin'})">
             <span>להורדת הפלאגין לפיגמה</span>
             <span class="cta-icon">⬇</span>
         </a>
@@ -646,7 +655,7 @@
                 <div class="copied-toast" id="copiedToast">✓ הקופון הועתק!</div>
             </div>
 
-            <a href="https://uxtra.co.il/courses/figma-flow" target="_blank" class="cta-secondary">
+            <a href="https://uxtra.co.il/courses/figma-flow" target="_blank" class="cta-secondary" onclick="gtag('event', 'click_figma_flow', {event_category: 'CTA', event_label: 'Figma Flow Details'})">
                 <span>לכל הפרטים</span>
                 <span>←</span>
             </a>
@@ -663,6 +672,7 @@
             navigator.clipboard.writeText('Flow15now').then(() => {
                 const toast = document.getElementById('copiedToast');
                 toast.style.display = 'block';
+                gtag('event', 'copy_coupon', {event_category: 'Engagement', event_label: 'Flow15now'});
                 setTimeout(() => {
                     toast.style.display = 'none';
                 }, 2000);
